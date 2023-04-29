@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.cdc1877c.css",
-    "main.js": "/react-gh-pages/static/js/main.f5f22935.js",
-    "static/js/787.a1e90bd1.chunk.js": "/react-gh-pages/static/js/787.a1e90bd1.chunk.js",
-    "static/media/default_category.svg": "/react-gh-pages/static/media/default_category.d9ecc85eef562473bb47f3ce6f593b13.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.cdc1877c.css.map": "/react-gh-pages/static/css/main.cdc1877c.css.map",
-    "main.f5f22935.js.map": "/react-gh-pages/static/js/main.f5f22935.js.map",
-    "787.a1e90bd1.chunk.js.map": "/react-gh-pages/static/js/787.a1e90bd1.chunk.js.map"
+    "main.css": "/sm-fe/static/css/main.cdc1877c.css",
+    "main.js": "/sm-fe/static/js/main.e1cea265.js",
+    "static/js/787.a1e90bd1.chunk.js": "/sm-fe/static/js/787.a1e90bd1.chunk.js",
+    "static/media/default_category.svg": "/sm-fe/static/media/default_category.d9ecc85eef562473bb47f3ce6f593b13.svg",
+    "index.html": "/sm-fe/index.html",
+    "main.cdc1877c.css.map": "/sm-fe/static/css/main.cdc1877c.css.map",
+    "main.e1cea265.js.map": "/sm-fe/static/js/main.e1cea265.js.map",
+    "787.a1e90bd1.chunk.js.map": "/sm-fe/static/js/787.a1e90bd1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cdc1877c.css",
-    "static/js/main.f5f22935.js"
+    "static/js/main.e1cea265.js"
   ]
 }
