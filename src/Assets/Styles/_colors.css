@@ -1,0 +1,12 @@
+:root{
+    --border: rgba(173, 173, 173, 0.25);;
+    --input-border: #6e6e6e;
+    --brand-main: #2e0609;
+    /* --font-color: #D98F23;
+    --placeholder: #d58523; */
+
+    --base-green: #3BB77E;
+    --anti-flash-white: #F3F3F3;
+    --grey: #ADADAD;
+    --font: #253D4E;
+}
