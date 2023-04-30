@@ -20,20 +20,20 @@ const Searchbar = () => {
     }
     return (
         <Styles.Wrapper className="center">
-            <SearchInput
-                placeholder="Search for items..."
-                value={searchText}
-                onChange={e => setSearchText(e.currentTarget.value)}
-            />
-            <MdOutlineCancel
-                onClick={() => setSearchText('')}
-                className="cursor-pointer"
-                color="var(--base-green)"
-                style={{
-                    position: 'absolute',
-                    right: '40px',
-                }}
-            />
+            <div className="center w-100" style={{ position: 'relative' }}>
+                <SearchInput
+                    placeholder="Search for items..."
+                    value={searchText}
+                    onChange={e => setSearchText(e.currentTarget.value)}
+                />
+                {searchText && (
+                    <MdOutlineCancel
+                        onClick={() => setSearchText('')}
+                        className="cursor-pointer cross-icon"
+                        color="var(--base-green)"
+                    />
+                )}
+            </div>
             <div className="search-icon center">
                 <AiOutlineSearch
                     onClick={() => onSearchHandler()}

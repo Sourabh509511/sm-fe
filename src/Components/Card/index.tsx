@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { FiEdit2 } from 'react-icons/fi';
 import * as Styles from './styles';
+import { FULL_URL } from 'config';
 
 export enum UrlEnum {
     Category = 'category',
@@ -48,15 +49,15 @@ const Card = ({
             className="align-center flex-column"
             height={height}
             width={width}
-            onClick={() => (onClick ? onClick(id) : {})}
             isActive={highlight}
+            onClick={() => (onClick ? onClick(id) : {})}
             style={styles}
         >
             <Styles.IconWrapper>
                 {isEditIcon && (
                     <Link
                         target="_blank"
-                        to={`http://localhost:8000/admin/products/${type}/${id}`}
+                        to={`${FULL_URL}admin/products/${type}/${id}`}
                     >
                         <FiEdit2 color="var(--base-green)" />
                     </Link>

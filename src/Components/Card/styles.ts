@@ -14,7 +14,7 @@ export const Wrapper = styled.div<{
     cursor: pointer;
     position: relative;
 
-    .image{
+    .image {
         border-radius: 8px 8px 0 0;
     }
 
@@ -48,6 +48,8 @@ export const IconWrapper = styled.div`
     top: 0;
     right: 0;
     padding: 2px;
+    background: white;
+    border-radius: 50%;
 `;
 
 export const TextInput = styled.input`

@@ -9,11 +9,23 @@ const ListPage = () => {
     return (
         <Styles.Wrapper className="d-flex flex-column">
             <Styles.CategoryWrapper>
-                <Styles.HeaderText>Explore Categories</Styles.HeaderText>
+                <div
+                    className="space-between cursor-pointer"
+                    onClick={() => {}}
+                >
+                    <Styles.HeaderText>Explore Categories</Styles.HeaderText>
+                    <div>see more</div>
+                </div>
                 <Category />
             </Styles.CategoryWrapper>
             <Styles.CategoryWrapper>
-                <Styles.HeaderText>Featured Products</Styles.HeaderText>
+                <div
+                    className="space-between cursor-pointer"
+                    onClick={() => {}}
+                >
+                    <Styles.HeaderText>Featured Products</Styles.HeaderText>
+                    <div>see more</div>
+                </div>
                 <Product />
             </Styles.CategoryWrapper>
         </Styles.Wrapper>

@@ -4,6 +4,7 @@ import DefaultCategory from 'Assets/Icons/default_category.svg';
 import { useTypedSelector } from 'utils';
 import { IProduct } from 'redux/reducers/ProductReducer';
 import * as Styles from './styles';
+import NoProduct from 'views/No Data/NoProduct';
 
 const ProductDetails = (product: IProduct) => {
     return (
@@ -19,8 +20,9 @@ const ProductDetails = (product: IProduct) => {
 
 const Product = () => {
     const product = useTypedSelector(store => store.product);
+    const user = useTypedSelector(store => store.user);
 
-    return (
+    return product.products ? (
         <div className="d-flex" style={{ gap: '8px', flexWrap: 'wrap' }}>
             {product.products.map((prod: IProduct) => (
                 <Card
@@ -29,11 +31,11 @@ const Product = () => {
                     type={UrlEnum.Product}
                     image={prod.image ? prod.image : DefaultCategory}
                     name={prod.name}
-                    height={302}
-                    width={228}
+                    height={160} //302
+                    width={129} //228
                     imageHeight={'60%'}
                     imageWidth={'100%'}
-                    isEditIcon
+                    isEditIcon={user.is_admin}
                     nameStyles={{
                         fontWeight: '600',
                         fontSize: '16px',
@@ -44,6 +46,8 @@ const Product = () => {
                 </Card>
             ))}
         </div>
+    ) : (
+        <NoProduct />
     );
 };
 

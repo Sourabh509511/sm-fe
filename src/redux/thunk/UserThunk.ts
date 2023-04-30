@@ -16,5 +16,6 @@ export const loginUser = (
         if (statusCode === SUCCESS_STATUS) {
             dispatch(setUserDataInStore(data));
         }
+        return statusCode
     };
 };

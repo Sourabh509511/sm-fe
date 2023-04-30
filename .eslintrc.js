@@ -114,7 +114,7 @@ module.exports = {
     */
     'space-before-blocks': ERROR,
     // always require a space b/w func name and (
-    'space-before-function-paren': ERROR,
+    // 'space-before-function-paren': ERROR,
     'react/jsx-no-bind': OFF,
     // React and JSX
     // not use ={true} when passing truthy values as props

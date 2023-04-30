@@ -14,3 +14,4 @@ export enum LocationEnum {
 }
 
 export const PADDING = '60px';
+export const PADDING_SM = '10px';

@@ -10,5 +10,5 @@ export function getProductData (searchQuery?: string) {
 }
 
 export function login (username: string, password: string) {
-    return callApi('post', Login, { username, password });
+    return callApi('post', Login, { Username: username, password });
 }

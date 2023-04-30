@@ -10,19 +10,24 @@ import { GrInstagram, GrTwitter } from 'react-icons/gr';
 import { RiLinkedinFill } from 'react-icons/ri';
 import * as Styles from './styles';
 import { LocationEnum } from 'Constant';
+import { useResponsiveHook } from 'views/useResponsive';
 
 const Footer = () => {
     const location = useLocation();
     const currentLocation = location.pathname.split('/')[1];
+
+    const { isDesktopOrLaptop, isMobile, isTablet, isMedium } = useResponsiveHook();
+
+    console.log('isDesktopOrLaptop', isDesktopOrLaptop);
+    console.log('isMobile', isMobile);
+    console.log('isTablet', isTablet);
 
     return (
         <Styles.Wrapper className="d-flex flex-column">
             <div className="space-between footer-data">
                 <div>
                     <Styles.First>
-                        <Logo
-                        // nameFontSize={28} tagLineSize={14}
-                        />
+                        <Logo />
                     </Styles.First>
                     <Styles.Text className="align-center">
                         <FiMapPin color="var(--base-green)" />
@@ -70,19 +75,22 @@ const Footer = () => {
                 </div>
             </div>
             <div className="space-between foorter-links">
-                <Styles.Text>© 2022, All rights reserved</Styles.Text>
+                <Styles.Text>© 2023, All rights reserved</Styles.Text>
                 <div className="d-flex" style={{ gap: '16px' }}>
                     <Styles.Links className="center">
-                        <FaFacebookF color="white" size={24} />
+                        <FaFacebookF color="white" size={isMedium ? 24 : 12} />
                     </Styles.Links>
                     <Styles.Links className="center">
-                        <RiLinkedinFill color="white" size={24} />
+                        <RiLinkedinFill
+                            color="white"
+                            size={isMedium ? 24 : 12}
+                        />
                     </Styles.Links>
                     <Styles.Links className="center">
-                        <GrInstagram color="white" size={24} />
+                        <GrInstagram color="white" size={isMedium ? 24 : 12} />
                     </Styles.Links>
                     <Styles.Links className="center">
-                        <GrTwitter color="white" size={24} />
+                        <GrTwitter color="white" size={isMedium ? 24 : 12} />
                     </Styles.Links>
                 </div>
             </div>

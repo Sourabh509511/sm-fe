@@ -1,9 +1,14 @@
-import { PADDING } from 'Constant';
+import { PADDING, PADDING_SM } from 'Constant';
+import { device } from 'media';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     padding: 0 ${PADDING} 38px ${PADDING};
     gap: 40px;
+
+    ${device.largeViewport} {
+        padding: 0 ${PADDING_SM} 38px ${PADDING_SM};
+    }
 
     .footer-data {
         border-top: 2px solid rgba(0, 0, 0, 0.05);
@@ -16,7 +21,6 @@ export const Wrapper = styled.div`
     }
     .Text {
         mergin-bottom: 29px;
-        // &:last-child
     }
 `;
 
@@ -36,6 +40,13 @@ export const Text = styled.div<{ highlight?: boolean }>`
     color: ${props => (props.highlight ? 'var(--base-green)' : 'var(--font)')};
     gap: 3px;
 
+    ${device.mediumViewport} {
+        font-size: 14px;
+    }
+    ${device.smallViewport} {
+        font-size: 11px;
+    }
+
     .last {
         margin-bottom: 0;
     }
@@ -51,6 +62,11 @@ export const FooterDetails = styled.div`
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
+
+        ${device.mediumViewport} {
+            font-size: 14px;
+            margin-right: 13px;
+        }
     }
 `;
 
@@ -60,4 +76,9 @@ export const Links = styled.div`
     height: 44px;
     background-color: var(--base-green);
     border-radius: 100%;
+
+    ${device.mediumViewport} {
+        width: 10px;
+        height: 10px;
+    }
 `;

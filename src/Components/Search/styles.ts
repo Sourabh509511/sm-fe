@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
     width: 100%;
     font-size: 18px;
-    position: relative;
 
     .search-icon {
         height: 44px;
@@ -11,6 +10,11 @@ export const Wrapper = styled.div`
         border-radius: 0px 2px 2px 0px;
         width: 40px;
         border: 1px solid var(--base-green);
+    }
+
+    .cross-icon {
+        position: absolute;
+        right: 2px;
     }
 `;
 
