@@ -117,7 +117,8 @@ class BaseApiService {
 
 class CoreApiService extends BaseApiService {
     constructor () {
-        super(`${config.SERVER_URL}${config.SERVER_PORT}/`);
+        // super(`${config.SERVER_URL}${config.SERVER_PORT}/`);
+        super(`${config.SERVER_URL}/`);
     }
 }
 
